@@ -1,25 +1,22 @@
 import styled from "styled-components";
-
+import bg from "../../Asset/images/maskimage.png";
 export const Container = styled.div`
   min-height: 100vh;
-  /* background-color: red; */
   display: grid;
-  grid-template-columns: 0.8fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
+  @media (max-width: 800px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const Container2 = styled.main`
-  /* background-color: blue; */
-  border: 2px solid green;
-  /* width: 40%; */
-`;
-export const LogoContainer = styled.menu`
-  /* border: 2px solid red; */
+  border: 2px solid blue;
   padding: 2em;
 `;
+export const LogoContainer = styled.menu``;
 
 export const Form = styled.div`
-  /* border: 1px solid red; */
   margin-top: 100px;
   display: flex;
   justify-content: center;
@@ -31,11 +28,9 @@ export const FormContainer = styled.section`
   align-items: center;
   flex-direction: column;
   width: 350px;
-  /* border: 1px solid black; */
   span {
     display: flex;
     width: 100%;
-    /* border: 1px solid red; */
     justify-content: space-between;
     align-self: center;
     margin-bottom: 20px;
@@ -98,7 +93,36 @@ export const BtnContainer = styled.div`
     margin-top: 30px;
   }
 `;
+
+export const CopyRightContainer = styled.div`
+  position: relative;
+  top: 150px;
+  @media (max-width: 800px) {
+    top: 50px;
+  }
+`;
 export const BgImgContainer = styled.div`
-  border: 2px solid blue;
-  /* width: 60%; */
+  background-color: #42a7c3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .imgCont {
+    width: 70%;
+    height: 90%;
+    border: 1px solid red;
+    border-radius: 16px;
+    background: rgba(183, 233, 246, 0.25);
+    backdrop-filter: blur(26px);
+    h2{
+      
+    }
+    /* img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    } */
+  }
+  @media (max-width: 800px) {
+    display: none;
+  }
 `;

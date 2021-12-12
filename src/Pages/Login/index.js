@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Input from "../../components/Input";
 import Button from "../../components/Button/";
 import logo from "../../Asset/images/Travling.jpg";
+import bgImg from "../../Asset/images/maskimage.png";
+
 import { GoogleIcon, FacebookIcon } from "../../Asset/svg";
 import {
   Container,
@@ -13,6 +15,8 @@ import {
   Span,
   Container3,
   BtnContainer,
+  CopyRightContainer,
+  ImageContainer,
 } from "./styles";
 
 const Index = () => {
@@ -61,8 +65,16 @@ const Index = () => {
             </BtnContainer>
           </FormContainer>
         </Form>
+        <CopyRightContainer>
+          <p>© {new Date().getFullYear()} Travling. All Rights Reserved</p>
+        </CopyRightContainer>
       </Container2>
-      <BgImgContainer></BgImgContainer>
+      <BgImgContainer>
+        <div className="imgCont">
+          <h2>Start your journey by one click, explore beautiful world!</h2>
+          {/* <img src={bgImg} /> */}
+        </div>
+      </BgImgContainer>
     </Container>
   );
 };
