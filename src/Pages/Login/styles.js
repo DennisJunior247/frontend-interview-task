@@ -1,17 +1,16 @@
 import styled from "styled-components";
-import bg from "../../Asset/images/maskimage.png";
+
 export const Container = styled.div`
   min-height: 100vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
-  @media (max-width: 800px) {
+  @media (max-width: 1387px) {
     grid-template-columns: 1fr;
   }
 `;
 
 export const Container2 = styled.main`
-  border: 2px solid blue;
   padding: 2em;
 `;
 export const LogoContainer = styled.menu``;
@@ -102,27 +101,82 @@ export const CopyRightContainer = styled.div`
   }
 `;
 export const BgImgContainer = styled.div`
-  background-color: #42a7c3;
+  /* background-color: #42a7c3;
+   */
+  background: linear-gradient(315deg, #42a7c3 0%, #8adbf0 75.03%);
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
   .imgCont {
-    width: 70%;
-    height: 90%;
-    border: 1px solid red;
+    width: 80%;
+    height: 80%;
+    border: 2px solid #e2f6fc40;
     border-radius: 16px;
     background: rgba(183, 233, 246, 0.25);
     backdrop-filter: blur(26px);
-    h2{
-      
+
+    h1 {
+      color: #ffffff;
+      position: absolute;
+      padding: 40px;
+      font-size: 50px;
+      font-weight: 700;
+      font-style: normal;
+      letter-spacing: 0.01em;
     }
-    /* img {
-      object-fit: cover;
-      width: 100%;
-      height: 100%;
-    } */
+    img {
+      position: absolute;
+      bottom: -4px;
+      right: -5px;
+      width: 70%;
+      height: auto;
+      max-width: 477px;
+    }
   }
-  @media (max-width: 800px) {
+
+  @media (max-width: 1387px) {
     display: none;
   }
+`;
+
+export const Dot = styled.div`
+  padding: 8px;
+  border-radius: 50%;
+  background: #f7f7f7;
+  opacity: 0.6;
+  border-radius: 16px;
+  position: absolute;
+  bottom: 20px;
+  left: 70px;
+  &::before,
+  ::after {
+    content: "";
+    padding: 8px;
+    position: absolute;
+    opacity: 0.6;
+    border-radius: 16px;
+  }
+
+  &::before {
+    right: 30px;
+    bottom: 1px;
+    width: 30px;
+    background-color: #ffffff;
+  }
+  &::after {
+    left: 30px;
+    top: 1px;
+    background-color: #f7f7f7;
+  }
+`;
+export const Bubble = styled.div`
+  position: absolute;
+  background-color: #fa8443;
+  /* filter: drop-shadow(8px), blur(8px); */
+  padding: 30px;
+  border-radius: 50%;
+  width: 40px;
 `;

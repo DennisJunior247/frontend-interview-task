@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Input from "../../components/Input";
 import Button from "../../components/Button/";
 import logo from "../../Asset/images/Travling.jpg";
-import bgImg from "../../Asset/images/maskimage.png";
+import bgImg from "../../Asset/images/img.png";
 
 import { GoogleIcon, FacebookIcon } from "../../Asset/svg";
 import {
@@ -16,7 +16,8 @@ import {
   Container3,
   BtnContainer,
   CopyRightContainer,
-  ImageContainer,
+  Dot,
+  Bubble,
 } from "./styles";
 
 const Index = () => {
@@ -70,9 +71,11 @@ const Index = () => {
         </CopyRightContainer>
       </Container2>
       <BgImgContainer>
+        <Bubble />
         <div className="imgCont">
-          <h2>Start your journey by one click, explore beautiful world!</h2>
-          {/* <img src={bgImg} /> */}
+          <h1>Start your journey by one click, explore beautiful world!</h1>
+          <img src={bgImg} alt="" />
+          <Dot />
         </div>
       </BgImgContainer>
     </Container>
