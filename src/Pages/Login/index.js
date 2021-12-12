@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import Input from "../../components/Input";
 import Button from "../../components/Button/";
-import { GoogleIcon } from "../../Asset/svg";
+import logo from "../../Asset/images/Travling.jpg";
+import { GoogleIcon, FacebookIcon } from "../../Asset/svg";
 import {
   Container,
   LogoContainer,
@@ -9,8 +10,11 @@ import {
   BgImgContainer,
   Form,
   FormContainer,
+  Span,
+  Container3,
+  BtnContainer,
 } from "./styles";
-import logo from "../../Asset/images/Travling.jpg";
+
 const Index = () => {
   const [showPassword, setShowPassword] = useState(false);
 
@@ -26,27 +30,37 @@ const Index = () => {
           <img src={logo} alt="" />
         </LogoContainer>
         <Form>
-
-        <FormContainer>
-          <span className="formTitle">
-            <h3>Masuk</h3>
-            <h5>Daftar</h5>
-          </span>
-          <form onSubmit={handleSubmit}>
-            <Input placeholder={"Name"} name="Name" />
-            <Input
-              handleClick={handleClick}
-              placeholder={"Password"}
-              showPassword={showPassword}
-              icon
-              name={"password"}
-              type={showPassword ? "text" : "password"}
-            />
-            <Button  bgColor text={"MUSK"} />
-          </form>
-        </FormContainer>
+          <FormContainer>
+            <span className="formTitle">
+              <h3>Masuk</h3>
+              <h5>Daftar</h5>
+            </span>
+            <form onSubmit={handleSubmit}>
+              <Input placeholder={"Nomor Ponsel atau Email"} name="Name" />
+              <Input
+                handleClick={handleClick}
+                placeholder={"Kata Sandi"}
+                showPassword={showPassword}
+                icon
+                name={"password"}
+                type={showPassword ? "text" : "password"}
+              />
+              <Button bgColor text={"MUSK"} />
+            </form>
+            <Span>
+              <p>
+                Lupa kata sandi? <a href={"#login"}> Klik disini</a>
+              </p>
+            </Span>
+            <Container3>
+              <p>atau masuk dengan</p>
+            </Container3>
+            <BtnContainer>
+              <Button color icon={<GoogleIcon />} text={"Google"} />
+              <Button color icon={<FacebookIcon />} text={"Facebook"} />
+            </BtnContainer>
+          </FormContainer>
         </Form>
-        <Span></Span>
       </Container2>
       <BgImgContainer></BgImgContainer>
     </Container>

@@ -23,6 +23,8 @@ export const Form = styled.div`
   margin-top: 100px;
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
 `;
 
 export const FormContainer = styled.section`
@@ -36,7 +38,7 @@ export const FormContainer = styled.section`
     /* border: 1px solid red; */
     justify-content: space-between;
     align-self: center;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     h3 {
       color: #515151;
       font-weight: bold;
@@ -53,11 +55,49 @@ export const FormContainer = styled.section`
 
   form {
     div {
-      margin-bottom: 40px;
+      margin-bottom: 45px;
     }
   }
 `;
+export const Span = styled.span`
+  margin-top: 20px;
+  width: 100%;
+  p {
+    font-style: normal;
+    font-weight: normal;
+    color: #515151;
+  }
+  a {
+    text-decoration: none;
+    font-size: 13px;
+    color: #0098ea;
+  }
+`;
+export const Container3 = styled.div`
+  margin-top: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #d0d0d0;
+  &::before,
+  ::after {
+    content: "";
+    width: 96px;
+    border: 1px solid #d0d0d0;
+  }
+  &::before {
+    margin-right: 10px;
+  }
+  &::after {
+    margin-left: 10px;
+  }
+`;
 
+export const BtnContainer = styled.div`
+  button {
+    margin-top: 30px;
+  }
+`;
 export const BgImgContainer = styled.div`
   border: 2px solid blue;
   /* width: 60%; */
