@@ -5,16 +5,22 @@ import { HiddenVisibilityIcon, PasswordEyeIcon } from "../../Asset/svg";
 const Index = (props) => {
   return (
     <Container>
-      <input type={props.type} {...props} />
+      <InputStyle
+        name={props.name}
+        type={props.type}
+        value={props.value}
+        onChange={props.onChange}
+        placeholder={props.placeholder}
+      />
       {props.icon ? (
-        <button type={props.type || "button"} onClick={props.handelclick}>
+        <button onClick={props.handleClick}>
           {props.showPassword ? (
-            <PasswordEyeIcon color={"#D0D0D0"} width="20px" height="20px" />
+            <PasswordEyeIcon color={"#778699"} width="20px" height="20px" />
           ) : (
             <HiddenVisibilityIcon
-              color={"#D0D0D0"}
-              width="10px"
-              height="10px"
+              color={"#778699"}
+              width="20px"
+              height="20px"
             />
           )}
         </button>
