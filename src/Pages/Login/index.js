@@ -71,10 +71,10 @@ const Index = () => {
         </CopyRightContainer>
       </Container2>
       <BgImgContainer>
-        <Bubble />
         <div className="imgCont">
           <h1>Start your journey by one click, explore beautiful world!</h1>
           <img src={bgImg} alt="" />
+        <Bubble />  
           <Dot />
         </div>
       </BgImgContainer>

@@ -175,8 +175,11 @@ export const Dot = styled.div`
 export const Bubble = styled.div`
   position: absolute;
   background-color: #fa8443;
-  /* filter: drop-shadow(8px), blur(8px); */
   padding: 30px;
   border-radius: 50%;
   width: 40px;
+  left: 200px;
+  top: 200px;
+  filter: blur(10px);
+  opacity: 0.6;
 `;
